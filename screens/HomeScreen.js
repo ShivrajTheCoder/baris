@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, Text, StyleSheet, ScrollView, TouchableOpacity } from 'react-native';
 
-export default function HomeScreen() {
+export default function HomeScreen({navigation}) {
     return (
         <View style={styles.container}>
             <View style={styles.navbar}>
@@ -22,7 +22,7 @@ export default function HomeScreen() {
                     </View>
                 </View>
                 <View style={{ backgroundColor: "white" , width:"100%", justifyContent:"center",alignItems:"center"}}>
-                    <TouchableOpacity style={styles.button}>
+                    <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('UserLogin')}>
                         <Text style={styles.buttonText}>Continue</Text>
                     </TouchableOpacity>
                     <TouchableOpacity >
