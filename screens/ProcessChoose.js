@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, Text, StyleSheet, TouchableOpacity, ScrollView } from 'react-native';
 
-export default function ProcessChoose() {
+export default function ProcessChoose({navigation}) {
   return (
     <View style={styles.container}>
       <ScrollView contentContainerStyle={styles.scrollContainer}>
@@ -10,9 +10,11 @@ export default function ProcessChoose() {
         </View>
         <View style={styles.processList}>
           {/* Dummy processes */}
-          <View style={styles.process}>
-            <Text style={styles.processText}>PWC</Text>
-          </View>
+          <TouchableOpacity style={styles.process} onPress={()=>{
+            navigation.navigate("PMC")
+          }}>
+            <Text style={styles.processText}>PMC</Text>
+          </TouchableOpacity>
           <View style={styles.process}>
             <Text style={styles.processText}>Process 2</Text>
           </View>

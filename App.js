@@ -7,6 +7,7 @@ import Login from './screens/Login';
 import Footer from './components/_layout/Footer';
 import UserLogin from './screens/UserLogin';
 import ProcessChoose from './screens/ProcessChoose';
+import PMC from './screens/ProcessScreen/PMC';
 
 const Stack = createNativeStackNavigator();
 
@@ -21,6 +22,17 @@ function App() {
           <Stack.Screen
             name="Process"
             component={ProcessChoose}
+            options={{
+              headerStyle: {
+                backgroundColor: '#68d8d6',
+              },
+              headerTintColor: '#fff',
+              headerBackTitleVisible: false,
+            }}
+          />
+          <Stack.Screen
+            name="PMC"
+            component={PMC}
             options={{
               headerStyle: {
                 backgroundColor: '#68d8d6',
