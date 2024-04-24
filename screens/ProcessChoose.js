@@ -15,18 +15,6 @@ export default function ProcessChoose({navigation}) {
           }}>
             <Text style={styles.processText}>PMC</Text>
           </TouchableOpacity>
-          <View style={styles.process}>
-            <Text style={styles.processText}>Process 2</Text>
-          </View>
-          <View style={styles.process}>
-            <Text style={styles.processText}>Process 3</Text>
-          </View>
-          <View style={styles.process}>
-            <Text style={styles.processText}>Process 4</Text>
-          </View>
-          <View style={styles.process}>
-            <Text style={styles.processText}>Process 5</Text>
-          </View>
         </View>
       </ScrollView>
       <TouchableOpacity style={styles.button}>
@@ -57,7 +45,7 @@ const styles = StyleSheet.create({
     marginTop: 3,
   },
   process: {
-    backgroundColor: '#67b99a',
+    backgroundColor: '#68d8d6',
     padding: 15,
     marginVertical: 1,
   },

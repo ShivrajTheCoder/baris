@@ -8,6 +8,11 @@ import Footer from './components/_layout/Footer';
 import UserLogin from './screens/UserLogin';
 import ProcessChoose from './screens/ProcessChoose';
 import PMC from './screens/ProcessScreen/PMC';
+import DSV from './screens/ProcessScreen/PMCscreens/DSV';
+import DCU from './screens/ProcessScreen/PMCscreens/DCU';
+import DMP from './screens/ProcessScreen/PMCscreens/DMP';
+import MLD from './screens/ProcessScreen/PMCscreens/MLD';
+import DPL from './screens/ProcessScreen/PMCscreens/DPL';
 
 const Stack = createNativeStackNavigator();
 
@@ -41,6 +46,62 @@ function App() {
               headerBackTitleVisible: false,
             }}
           />
+          <Stack.Screen
+            name="DSV"
+            component={DSV}
+            options={{
+              headerStyle: {
+                backgroundColor: '#68d8d6',
+              },
+              headerTintColor: '#fff',
+              headerBackTitleVisible: false,
+            }}
+          />
+          <Stack.Screen
+            name="DCU"
+            component={DCU}
+            options={{
+              headerStyle: {
+                backgroundColor: '#68d8d6',
+              },
+              headerTintColor: '#fff',
+              headerBackTitleVisible: false,
+            }}
+          />
+          <Stack.Screen
+            name="DMP"
+            component={DMP}
+            options={{
+              headerStyle: {
+                backgroundColor: '#68d8d6',
+              },
+              headerTintColor: '#fff',
+              headerBackTitleVisible: false,
+            }}
+          />
+          <Stack.Screen
+            name="MLD"
+            component={MLD}
+            options={{
+              headerStyle: {
+                backgroundColor: '#68d8d6',
+              },
+              headerTintColor: '#fff',
+              headerBackTitleVisible: false,
+            }}
+          />
+          <Stack.Screen
+            name="DPL"
+            component={DPL}
+            options={{
+              headerStyle: {
+                backgroundColor: '#68d8d6',
+              },
+              headerTintColor: '#fff',
+              headerBackTitleVisible: false,
+            }}
+          />
+          
         </Stack.Navigator>
         <Footer/>
       </View>

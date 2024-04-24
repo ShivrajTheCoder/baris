@@ -7,19 +7,19 @@ export default function PMC({ navigation }) {
             <View style={styles.header}>
                 <Text style={styles.headerText}>PMC</Text>
             </View>
-            <TouchableOpacity style={styles.item} onPress={() => navigation.navigate('DailySurpriseVisit')}>
+            <TouchableOpacity style={styles.item} onPress={() => navigation.navigate('DSV')}>
                 <Text style={styles.itemText}>Daily Surprise Visit</Text>
             </TouchableOpacity>
-            <TouchableOpacity style={styles.item} onPress={() => navigation.navigate('DailyConsumableUsage')}>
+            <TouchableOpacity style={styles.item} onPress={() => navigation.navigate('DCU')}>
                 <Text style={styles.itemText}>Daily Consumable Usage</Text>
             </TouchableOpacity>
-            <TouchableOpacity style={styles.item} onPress={() => navigation.navigate('DailyMachinePerformance')}>
+            <TouchableOpacity style={styles.item} onPress={() => navigation.navigate('DMP')}>
                 <Text style={styles.itemText}>Daily Machine Performance</Text>
             </TouchableOpacity>
-            <TouchableOpacity style={styles.item} onPress={() => navigation.navigate('ManpowerLogDetails')}>
+            <TouchableOpacity style={styles.item} onPress={() => navigation.navigate('MLD')}>
                 <Text style={styles.itemText}>Manpower Log Details</Text>
             </TouchableOpacity>
-            <TouchableOpacity style={styles.item} onPress={() => navigation.navigate('DailyPerformanceLog')}>
+            <TouchableOpacity style={styles.item} onPress={() => navigation.navigate('DPL')}>
                 <Text style={styles.itemText}>Daily Performance Log</Text>
             </TouchableOpacity>
         </View>
@@ -41,7 +41,7 @@ const styles = StyleSheet.create({
         fontSize: 20,
     },
     item: {
-        backgroundColor: '#67b99a',
+        backgroundColor: '#68d8d6',
         padding: 15,
         marginVertical: 1,
     },
