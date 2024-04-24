@@ -7,6 +7,7 @@ export default function UserLogin({ navigation }) {
 
     const handleLogin = () => {
         // Handle login logic here
+        navigation.navigate("Process")
     };
 
     return (
