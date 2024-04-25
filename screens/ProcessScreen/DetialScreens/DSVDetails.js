@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 import FloorSurfaceForm from '../../../components/Forms/DSVForms/FloorSurfaceForm';
+import InputForm from '../../../components/Forms/InputForm';
 
 
 export default function DSVDetails() {
@@ -20,7 +21,7 @@ export default function DSVDetails() {
         { name: "Glass Work/ Finishes with Frames Measurement Sheet", formComponent: <FloorSurfaceForm /> },
         { name: "Escalators Cleanliness Measurement Sheet", formComponent: <FloorSurfaceForm /> },
         { name: "Toilets Cleanliness Measurement Sheet", formComponent: <FloorSurfaceForm /> },
-        { name: "Station Tracks Measurement Sheet", formComponent: <FloorSurfaceForm /> }
+        { name: "Station Tracks Measurement Sheet", formComponent: <InputForm/> }
     ];
 
     const handleLinkClick = (name) => {
