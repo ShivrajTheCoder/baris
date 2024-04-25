@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
-import FloorSurfaceForm from '../../../components/Forms/DSVForms/FloorSurfaceForm';
-import InputForm from '../../../components/Forms/InputForm';
+import FloorSurfaceForm from '../../components/Forms/DSVForms/FloorSurfaceForm';
+import InputForm from '../../components/Forms/InputForm';
 
 
-export default function DSVDetails() {
+
+export default function ActionForms() {
     const [heading, setHeading] = useState("Daily Surprise Visit");
     const [selectedLink, setSelectedLink] = useState(null);
     const shortenText = (text, maxLength=30) => {

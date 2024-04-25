@@ -7,14 +7,9 @@ import Login from './screens/Login';
 import Footer from './components/_layout/Footer';
 import UserLogin from './screens/UserLogin';
 import ProcessChoose from './screens/ProcessChoose';
-import DSV from './screens/ProcessScreen/PMCscreens/DSV';
-import DCU from './screens/ProcessScreen/PMCscreens/DCU';
-import DMP from './screens/ProcessScreen/PMCscreens/DMP';
-import MLD from './screens/ProcessScreen/PMCscreens/MLD';
-import DPL from './screens/ProcessScreen/PMCscreens/DPL';
-import DSVDetails from './screens/ProcessScreen/DetialScreens/DSVDetails';
 import ProcessDetials from './screens/ProcessDetails';
 import SubProcessForm from './screens/ProcessScreen/SubProcessForm';
+import ActionForms from './screens/ProcessScreen/ActionForms';
 
 const Stack = createNativeStackNavigator();
 
@@ -61,8 +56,8 @@ function App() {
           />
           {/* process details screens */}
           <Stack.Screen
-            name="DSV Details"
-            component={DSVDetails}
+            name="Actions"
+            component={ActionForms}
             options={{
               headerStyle: {
                 backgroundColor: '#68d8d6',
