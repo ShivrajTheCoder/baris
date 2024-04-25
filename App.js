@@ -7,13 +7,13 @@ import Login from './screens/Login';
 import Footer from './components/_layout/Footer';
 import UserLogin from './screens/UserLogin';
 import ProcessChoose from './screens/ProcessChoose';
-import PMC from './screens/ProcessScreen/PMC';
 import DSV from './screens/ProcessScreen/PMCscreens/DSV';
 import DCU from './screens/ProcessScreen/PMCscreens/DCU';
 import DMP from './screens/ProcessScreen/PMCscreens/DMP';
 import MLD from './screens/ProcessScreen/PMCscreens/MLD';
 import DPL from './screens/ProcessScreen/PMCscreens/DPL';
 import DSVDetails from './screens/ProcessScreen/DetialScreens/DSVDetails';
+import ProcessDetials from './screens/ProcessDetails';
 
 const Stack = createNativeStackNavigator();
 
@@ -37,8 +37,8 @@ function App() {
             }}
           />
           <Stack.Screen
-            name="PMC"
-            component={PMC}
+            name="Process Details"
+            component={ProcessDetials}
             options={{
               headerStyle: {
                 backgroundColor: '#68d8d6',

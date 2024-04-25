@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, Text, StyleSheet, TouchableOpacity, ScrollView } from 'react-native';
 
-export default function ProcessChoose({navigation}) {
+export default function ProcessChoose({ navigation }) {
   return (
     <View style={styles.container}>
       <ScrollView contentContainerStyle={styles.scrollContainer}>
@@ -10,8 +10,8 @@ export default function ProcessChoose({navigation}) {
         </View>
         <View style={styles.processList}>
           {/* Dummy processes */}
-          <TouchableOpacity style={styles.process} onPress={()=>{
-            navigation.navigate("PMC")
+          <TouchableOpacity style={styles.process} onPress={() => {
+            navigation.navigate("Process Details", { id: 1, name: "PWC" });
           }}>
             <Text style={styles.processText}>PMC</Text>
           </TouchableOpacity>
@@ -58,9 +58,9 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     padding: 5,
     borderRadius: 10,
-    marginBottom:55,
-    width:"50%",
-    marginHorizontal:"25%",
+    marginBottom: 55,
+    width: "50%",
+    marginHorizontal: "25%",
   },
   buttonText: {
     color: '#fff',

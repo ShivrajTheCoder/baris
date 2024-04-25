@@ -1,11 +1,17 @@
-import React from 'react';
+import { useRoute } from '@react-navigation/native';
+import React, { useEffect } from 'react';
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 
-export default function PMC({ navigation }) {
+export default function ProcessDetails({ navigation }) {
+    const route = useRoute();
+    useEffect(()=>{
+        console.log("fetch all detials form server and render each of them")
+    },[])
+  const { id, name } = route.params;
     return (
         <View style={styles.container}>
             <View style={styles.header}>
-                <Text style={styles.headerText}>PMC</Text>
+                <Text style={styles.headerText}>{name}</Text>
             </View>
             <TouchableOpacity style={styles.item} onPress={() => navigation.navigate('DSV')}>
                 <Text style={styles.itemText}>Daily Surprise Visit</Text>
