@@ -14,6 +14,7 @@ import MLD from './screens/ProcessScreen/PMCscreens/MLD';
 import DPL from './screens/ProcessScreen/PMCscreens/DPL';
 import DSVDetails from './screens/ProcessScreen/DetialScreens/DSVDetails';
 import ProcessDetials from './screens/ProcessDetails';
+import SubProcessForm from './screens/ProcessScreen/SubProcessForm';
 
 const Stack = createNativeStackNavigator();
 
@@ -48,52 +49,8 @@ function App() {
             }}
           />
           <Stack.Screen
-            name="DSV"
-            component={DSV}
-            options={{
-              headerStyle: {
-                backgroundColor: '#68d8d6',
-              },
-              headerTintColor: '#fff',
-              headerBackTitleVisible: false,
-            }}
-          />
-          <Stack.Screen
-            name="DCU"
-            component={DCU}
-            options={{
-              headerStyle: {
-                backgroundColor: '#68d8d6',
-              },
-              headerTintColor: '#fff',
-              headerBackTitleVisible: false,
-            }}
-          />
-          <Stack.Screen
-            name="DMP"
-            component={DMP}
-            options={{
-              headerStyle: {
-                backgroundColor: '#68d8d6',
-              },
-              headerTintColor: '#fff',
-              headerBackTitleVisible: false,
-            }}
-          />
-          <Stack.Screen
-            name="MLD"
-            component={MLD}
-            options={{
-              headerStyle: {
-                backgroundColor: '#68d8d6',
-              },
-              headerTintColor: '#fff',
-              headerBackTitleVisible: false,
-            }}
-          />
-          <Stack.Screen
-            name="DPL"
-            component={DPL}
+            name="Sub Process"
+            component={SubProcessForm}
             options={{
               headerStyle: {
                 backgroundColor: '#68d8d6',

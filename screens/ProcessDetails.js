@@ -4,28 +4,28 @@ import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 
 export default function ProcessDetails({ navigation }) {
     const route = useRoute();
-    useEffect(()=>{
-        console.log("fetch all detials form server and render each of them")
-    },[])
-  const { id, name } = route.params;
+    useEffect(() => {
+        console.log("fetch all details from server and render each of them")
+    }, []);
+    const { id, name } = route.params;
     return (
         <View style={styles.container}>
             <View style={styles.header}>
                 <Text style={styles.headerText}>{name}</Text>
             </View>
-            <TouchableOpacity style={styles.item} onPress={() => navigation.navigate('DSV')}>
+            <TouchableOpacity style={styles.item} onPress={() => navigation.navigate('Sub Process', { id: 1, name: "Daily Surprise Visit" })}>
                 <Text style={styles.itemText}>Daily Surprise Visit</Text>
             </TouchableOpacity>
-            <TouchableOpacity style={styles.item} onPress={() => navigation.navigate('DCU')}>
+            <TouchableOpacity style={styles.item} onPress={() => navigation.navigate('Sub Process', { id: 2, name: "Daily Consumable Usage" })}>
                 <Text style={styles.itemText}>Daily Consumable Usage</Text>
             </TouchableOpacity>
-            <TouchableOpacity style={styles.item} onPress={() => navigation.navigate('DMP')}>
+            <TouchableOpacity style={styles.item} onPress={() => navigation.navigate('Sub Process', { id: 3, name: "Daily Machine Performance" })}>
                 <Text style={styles.itemText}>Daily Machine Performance</Text>
             </TouchableOpacity>
-            <TouchableOpacity style={styles.item} onPress={() => navigation.navigate('MLD')}>
+            <TouchableOpacity style={styles.item} onPress={() => navigation.navigate('Sub Process', { id: 4, name: "Manpower Log Details" })}>
                 <Text style={styles.itemText}>Manpower Log Details</Text>
             </TouchableOpacity>
-            <TouchableOpacity style={styles.item} onPress={() => navigation.navigate('DPL')}>
+            <TouchableOpacity style={styles.item} onPress={() => navigation.navigate('Sub Process', { id: 5, name: "Daily Performance Log" })}>
                 <Text style={styles.itemText}>Daily Performance Log</Text>
             </TouchableOpacity>
         </View>
