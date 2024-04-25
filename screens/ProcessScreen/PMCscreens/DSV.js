@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 
-export default function DSV() {
+export default function DSV({navigation}) {
   return (
     <View style={styles.container}>
       <View style={styles.redSection}>
@@ -13,7 +13,7 @@ export default function DSV() {
         <Text style={styles.infoText}>Station Name: Agra Cantt</Text>
         <Text style={styles.infoText}>Division Name: Agra</Text>
       </View>
-      <TouchableOpacity style={styles.nextButton}>
+      <TouchableOpacity style={styles.nextButton} onPress={()=>navigation.navigate("DSV Details")}>
         <Text style={styles.nextButtonText}>Next</Text>
       </TouchableOpacity>
     </View>

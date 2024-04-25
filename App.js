@@ -13,6 +13,7 @@ import DCU from './screens/ProcessScreen/PMCscreens/DCU';
 import DMP from './screens/ProcessScreen/PMCscreens/DMP';
 import MLD from './screens/ProcessScreen/PMCscreens/MLD';
 import DPL from './screens/ProcessScreen/PMCscreens/DPL';
+import DSVDetails from './screens/ProcessScreen/DetialScreens/DSVDetails';
 
 const Stack = createNativeStackNavigator();
 
@@ -93,6 +94,18 @@ function App() {
           <Stack.Screen
             name="DPL"
             component={DPL}
+            options={{
+              headerStyle: {
+                backgroundColor: '#68d8d6',
+              },
+              headerTintColor: '#fff',
+              headerBackTitleVisible: false,
+            }}
+          />
+          {/* process details screens */}
+          <Stack.Screen
+            name="DSV Details"
+            component={DSVDetails}
             options={{
               headerStyle: {
                 backgroundColor: '#68d8d6',
