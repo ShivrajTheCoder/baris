@@ -1,8 +1,14 @@
 import React, { useState } from 'react';
 import { View, ScrollView, Button, Text } from 'react-native';
 import InputFormLayout from '../_layout/formlayouts/InputFormLayout';
+import { useRoute } from '@react-navigation/native';
 
 const InputForm = () => {
+  const route = useRoute();
+    const { id, name } = route.params;
+    useEffect(()=>{
+        // fetch questions and options from server based on name and id of the form and then handle submit from this component to save the report
+    },[])
   // Define sample questions
   const [questions] = useState([
     { id: 1, text: 'How satisfied are you with the cleanliness of the floor?' },

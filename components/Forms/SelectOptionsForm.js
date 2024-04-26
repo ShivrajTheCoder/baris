@@ -1,8 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { View, ScrollView, Button } from 'react-native';
-import SelectFormLayout from '../../_layout/formlayouts/SelectFormLayout';
+import SelectFormLayout from '../_layout/formlayouts/SelectFormLayout';
+import { useRoute } from '@react-navigation/native';
 
-const FloorSurfaceForm = () => {
+const SelectOptionsForm = () => {
+    const route = useRoute();
+    const { id, name } = route.params;
+    useEffect(()=>{
+        // fetch questions and options from server based on name and id of the form and then handle submit from this component to save the report
+    },[])
   // Define sample questions and options
   const [questions, setQuestions] = useState([
     { id: 1, text: 'How satisfied are you with the cleanliness of the floor?' },
@@ -75,4 +81,4 @@ const FloorSurfaceForm = () => {
   );
 };
 
-export default FloorSurfaceForm;
+export default SelectOptionsForm;

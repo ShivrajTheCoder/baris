@@ -1,28 +1,37 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
-import FloorSurfaceForm from '../../components/Forms/DSVForms/FloorSurfaceForm';
 import InputForm from '../../components/Forms/InputForm';
-
-
+import SelectOptionsForm from '../../components/Forms/SelectOptionsForm';
+import { useRoute } from '@react-navigation/native';
 
 export default function ActionForms() {
-    const [heading, setHeading] = useState("Daily Surprise Visit");
+    const route = useRoute();
+    const { id, name } = route.params;
+
+    useEffect(()=>{
+        // implement logic to fetch all the associated forms and conditionally render those forms 
+        // if the form needs selection then use Select From if it needs numbers use Input Form
+    },[]);
+
+    const [heading, setHeading] = useState(name);
     const [selectedLink, setSelectedLink] = useState(null);
+
     const shortenText = (text, maxLength=30) => {
         if (text.length <= maxLength) {
             return text;
         }
         return text.substring(0, maxLength - 3) + '...';
     };
+
     const links = [
-        { name: "Floor Surface Cleanliness Measurement Sheet", formComponent: <FloorSurfaceForm /> },
-        { name: "Stairs Cleanliness Measurement Sheet", formComponent: <FloorSurfaceForm /> },
-        { name: "Wall Cladding Measurement Sheet", formComponent: <FloorSurfaceForm /> },
-        { name: "Steel Work Measurement Sheet", formComponent: <FloorSurfaceForm /> },
-        { name: "Glass Work/ Finishes with Frames Measurement Sheet", formComponent: <FloorSurfaceForm /> },
-        { name: "Escalators Cleanliness Measurement Sheet", formComponent: <FloorSurfaceForm /> },
-        { name: "Toilets Cleanliness Measurement Sheet", formComponent: <FloorSurfaceForm /> },
-        { name: "Station Tracks Measurement Sheet", formComponent: <InputForm/> }
+        { name: "Floor Surface Cleanliness Measurement Sheet", formComponent: <SelectOptionsForm name="Floor Surface Cleanliness Measurement Sheet" id={1} /> },
+        { name: "Stairs Cleanliness Measurement Sheet", formComponent: <SelectOptionsForm name="Stairs Cleanliness Measurement Sheet" id={2} /> },
+        { name: "Wall Cladding Measurement Sheet", formComponent: <SelectOptionsForm name="Wall Cladding Measurement Sheet" id={3} /> },
+        { name: "Steel Work Measurement Sheet", formComponent: <SelectOptionsForm name="Steel Work Measurement Sheet" id={4} /> },
+        { name: "Glass Work/ Finishes with Frames Measurement Sheet", formComponent: <SelectOptionsForm name="Glass Work/ Finishes with Frames Measurement Sheet" id={5} /> },
+        { name: "Escalators Cleanliness Measurement Sheet", formComponent: <SelectOptionsForm name="Escalators Cleanliness Measurement Sheet" id={6} /> },
+        { name: "Toilets Cleanliness Measurement Sheet", formComponent: <SelectOptionsForm name="Toilets Cleanliness Measurement Sheet" id={7} /> },
+        { name: "Station Tracks Measurement Sheet", formComponent: <InputForm name="Station Tracks Measurement Sheet" id={8} /> }
     ];
 
     const handleLinkClick = (name) => {
