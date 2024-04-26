@@ -1,14 +1,16 @@
 import React from 'react';
-import { View, Text, StyleSheet, ScrollView, TouchableOpacity } from 'react-native';
-
-export default function HomeScreen({navigation}) {
+import { View, Text, StyleSheet, ScrollView, TouchableOpacity, Image } from 'react-native';
+import beatleIcon from "../assets/beatleicon.png";
+export default function HomeScreen({ navigation }) {
     return (
         <View style={styles.container}>
             <View style={styles.navbar}>
+                
                 <Text style={styles.title}>Welcome to ba-score cards</Text>
             </View>
             <ScrollView style={{ backgroundColor: "white" }}>
                 <View style={styles.welcomeSection}>
+                <Image source={beatleIcon} style={{ width: 150, height: 100 }} />
                     <Text style={styles.welcomeText}>Welcome To Agra cant</Text>
                 </View>
                 <View style={styles.middleSection}>
@@ -21,12 +23,12 @@ export default function HomeScreen({navigation}) {
                         </Text>
                     </View>
                 </View>
-                <View style={{ backgroundColor: "white" , width:"100%", justifyContent:"center",alignItems:"center"}}>
+                <View style={{ backgroundColor: "white", width: "100%", justifyContent: "center", alignItems: "center" }}>
                     <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('UserLogin')}>
                         <Text style={styles.buttonText}>Continue</Text>
                     </TouchableOpacity>
                     <TouchableOpacity >
-                        <Text style={{color:"gray", fontSize:18}}>Logout</Text>
+                        <Text style={{ color: "gray", fontSize: 18 }}>Logout</Text>
                     </TouchableOpacity>
                 </View>
             </ScrollView>
@@ -100,6 +102,6 @@ const styles = StyleSheet.create({
     buttonText: {
         color: '#ffffff',
         fontSize: 16,
-        fontWeight:"bold"
+        fontWeight: "bold"
     },
 });

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { Text, View, TextInput, StyleSheet, TouchableOpacity } from 'react-native';
-
+import { Text, View, TextInput, StyleSheet, TouchableOpacity, Image } from 'react-native';
+import beatleIcon from "../assets/beatleicon.png";
 export default function UserLogin({ navigation }) {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
@@ -13,6 +13,7 @@ export default function UserLogin({ navigation }) {
     return (
         <View style={styles.container}>
             <View style={styles.topSection}>
+            <Image source={beatleIcon} style={{ width: 150, height: 100 }} />
                 <Text style={styles.welcomeText}>Welcome to Beatle Analytics-Score Card</Text>
             </View>
             <View style={styles.bottomSection}>

@@ -1,10 +1,11 @@
 import React from 'react';
-import { Text, View, TextInput, StyleSheet, TouchableOpacity } from 'react-native';
-
-export default function Login({navigation}) {
+import { Text, View, TextInput, StyleSheet, TouchableOpacity, Image } from 'react-native';
+import beatleIcon from "../assets/beatleicon.png";
+export default function Login({ navigation }) {
     return (
         <View style={styles.container}>
             <View style={styles.topSection}>
+                <Image source={beatleIcon} style={{ width: 150, height: 100 }} />
                 <Text style={styles.welcomeText}>Welcome to BARIS</Text>
             </View>
             <View style={styles.bottomSection}>
